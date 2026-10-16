@@ -16,7 +16,6 @@ public class Employee {
         System.out.println("Salary (Instance Variable): " + salary);
         System.out.println("Bonus (Local Variable): " + bonus);
 
-        // Local inner class, declared inside display()
         class Report {
             void show() {
                 System.out.println("Report: Employee salary is " + salary);
@@ -39,7 +38,7 @@ public class Employee {
         int bonus = sc.nextInt();
 
         System.out.println();
-        Employee emp = new Employee();   // constructor prints the hash code
+        Employee emp = new Employee();   
         emp.salary = salary;
 
         emp.display(bonus);
