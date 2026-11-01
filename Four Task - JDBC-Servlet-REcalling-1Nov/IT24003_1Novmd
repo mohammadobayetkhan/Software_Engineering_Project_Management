@@ -19,10 +19,9 @@ Activate your educational licence and verify that IntelliJ IDEA Ultimate is work
 
 
 
-## Output and Screenshot
+## Output and Screenshot : 
+https://github.com/mohammadobayetkhan/Software_Engineering_Project_Management/tree/main/Four%20Task%20-%20JDBC-Servlet-REcalling-1Nov/Image
 
-
----
 
 # Task 2: JDBC Database Connectivity – Prime Number Insertion
 
@@ -196,12 +195,8 @@ Expected verified output:
 ```
 
 ## Screenshots
+https://github.com/mohammadobayetkhan/Software_Engineering_Project_Management/tree/main/Four%20Task%20-%20JDBC-Servlet-REcalling-1Nov/Image
 
-
-
-[Insert screenshot of MySQL database output]
-
----
 
 # Task 3: Configure Apache Tomcat Server
 
@@ -249,13 +244,7 @@ The Tomcat welcome page confirmed that the server was running.
 
 ## Screenshots
 
-[Insert screenshot of Tomcat configuration]
-
-[Insert screenshot of successful Tomcat startup]
-
-[Insert screenshot of Tomcat welcome page]
-
----
+https://github.com/mohammadobayetkhan/Software_Engineering_Project_Management/tree/main/Four%20Task%20-%20JDBC-Servlet-REcalling-1Nov/Image
 
 # Task 4: Browser-Based Primality Testing Using Java Servlet
 
@@ -320,13 +309,12 @@ PrimeChecker
 │           └── index.html
 │
 └── pom.xml
-```
+
 
 ## Complete Servlet Source Code
 
 **File: PrimeServlet.java**
 
-```java
 package com.example;
 
 import jakarta.servlet.annotation.WebServlet;
@@ -387,13 +375,11 @@ public class PrimeServlet extends HttpServlet {
         out.println("</body></html>");
     }
 }
-```
 
 ## HTML Source Code
 
 **File: index.html**
 
-```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -417,10 +403,9 @@ public class PrimeServlet extends HttpServlet {
 
 Used Maven to clean and package the application.
 
-```bash
+
 mvn clean
 mvn package
-```
 
 The build completed successfully.
 
@@ -469,20 +454,7 @@ http://localhost:8080/PrimeChecker/check
 Both test cases were successfully checked in the browser.
 
 ## Screenshots
-
-[Insert screenshot of PrimeServlet.java]
-
-[Insert screenshot of pom.xml]
-
-[Insert screenshot of successful Maven BUILD SUCCESS]
-
-[Insert screenshot of Prime Number Checker home page]
-
-[Insert screenshot showing result for 17]
-
-[Insert screenshot showing result for 20]
-
----
+https://github.com/mohammadobayetkhan/Software_Engineering_Project_Management/tree/main/Four%20Task%20-%20JDBC-Servlet-REcalling-1Nov/Image
 
 # Conclusion
 
