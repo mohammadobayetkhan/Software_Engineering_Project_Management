@@ -1,0 +1,499 @@
+# Java Programming and Database Assignment
+## Submission Date: 1 November 2026
+
+### Student Information
+
+- **Full Name:** Md Obayet Khan
+- **Student ID:** IT24003
+- **University Email:** it24003@mbstu.ac.bd
+- **GitHub Repository:** [Paste Your GitHub Repository URL]
+
+---
+
+# Task 1:  Install IntelliJ IDEA Ultimate 
+
+## Objective
+Download and install IntelliJ IDEA Ultimate.
+Apply for the JetBrains Student Licence using your university email address.
+Activate your educational licence and verify that IntelliJ IDEA Ultimate is working.
+
+
+
+## Output and Screenshot
+
+
+---
+
+# Task 2: JDBC Database Connectivity – Prime Number Insertion
+
+## Objective
+To establish a JDBC connection between a Java application and a MySQL database, calculate the n-th prime number, insert the result into a database table, and retrieve the stored records.
+
+## Tools and Technologies
+- Java (JDK 25)
+- IntelliJ IDEA
+- Maven
+- MySQL Server 8.0.46
+- MySQL Connector/J 9.5.0
+
+## Database Configuration
+
+**Database Name:** `prime_db`
+
+**Table Name:** `obayet_khan_prime`
+
+### SQL Commands
+
+Create the database:
+
+```sql
+CREATE DATABASE prime_db;
+USE prime_db;
+```
+
+Create the table:
+
+```sql
+CREATE TABLE obayet_khan_prime (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    input_n INT NOT NULL,
+    prime_number BIGINT NOT NULL
+);
+```
+
+### Maven Dependency
+
+```xml
+<dependency>
+    <groupId>com.mysql</groupId>
+    <artifactId>mysql-connector-j</artifactId>
+    <version>9.5.0</version>
+</dependency>
+```
+
+## Complete Java Source Code
+
+**File: Main.java**
+
+```java
+import java.sql.*;
+import java.util.Scanner;
+
+public class Main {
+
+    public static boolean isPrime(int number) {
+        if (number < 2) {
+            return false;
+        }
+
+        for (int i = 2; i <= number / i; i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public static long findNthPrime(int n) {
+        int count = 0;
+        long number = 1;
+
+        while (count < n) {
+            number++;
+
+            if (isPrime((int) number)) {
+                count++;
+            }
+        }
+
+        return number;
+    }
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter n: ");
+        int n = sc.nextInt();
+
+        if (n <= 0) {
+            System.out.println("Enter a positive integer.");
+            return;
+        }
+
+        long prime = findNthPrime(n);
+
+        String url = "jdbc:mysql://localhost:3306/prime_db";
+        String username = "root";
+        String password = "YOUR_MYSQL_PASSWORD";
+
+        try (Connection con =
+                     DriverManager.getConnection(url, username, password)) {
+
+            String sql = "INSERT INTO obayet_khan_prime " +
+                         "(input_n, prime_number) VALUES (?, ?)";
+
+            PreparedStatement ps = con.prepareStatement(sql);
+
+            ps.setInt(1, n);
+            ps.setLong(2, prime);
+
+            ps.executeUpdate();
+
+            System.out.println("The " + n +
+                    "th prime number is: " + prime);
+
+            String query = "SELECT * FROM obayet_khan_prime";
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(query);
+
+            System.out.println("\nStored Records:");
+
+            while (rs.next()) {
+                System.out.println(
+                    rs.getInt("id") + " | " +
+                    rs.getInt("input_n") + " | " +
+                    rs.getLong("prime_number")
+                );
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        sc.close();
+    }
+}
+```
+
+**Note:** Replace `YOUR_MYSQL_PASSWORD` with your actual MySQL root password before running the program.
+
+## Execution Result
+
+The program was tested with the following inputs:
+
+- Input: `25` → Prime Number: `97`
+- Input: `250` → Prime Number: `1583`
+
+### Database Output
+
+SQL command:
+
+```sql
+SELECT * FROM obayet_khan_prime;
+```
+
+Expected verified output:
+
+```text
++----+---------+--------------+
+| id | input_n | prime_number |
++----+---------+--------------+
+|  1 |      25 |           97 |
+|  2 |     250 |         1583 |
++----+---------+--------------+
+```
+
+## Screenshots
+
+[Insert screenshot of Java program execution]
+
+[Insert screenshot of MySQL database output]
+
+---
+
+# Task 3: Configure Apache Tomcat Server
+
+## Objective
+To install and configure Apache Tomcat as an application server in IntelliJ IDEA Ultimate and verify that the server starts successfully.
+
+## Tools and Technologies
+- Apache Tomcat 11.0.27
+- IntelliJ IDEA Ultimate
+- JDK 25
+- Windows 11
+
+## Installation and Configuration
+
+1. Downloaded Apache Tomcat 11.0.27 for Windows x64.
+2. Extracted the downloaded ZIP file.
+3. Configured the Tomcat server in IntelliJ IDEA.
+4. Selected the Tomcat Home Directory.
+5. Configured the server settings.
+
+### Server Configuration
+
+- **Server Name:** Tomcat 11
+- **Application Server:** Apache Tomcat 11.0.27
+- **JRE:** JDK 25
+- **HTTP Port:** 8080
+
+### Tomcat Home Directory
+
+```text
+D:\apache-tomcat-11.0.27-windows-x64\apache-tomcat-11.0.27
+```
+
+### Verification
+
+Started the Tomcat server from IntelliJ IDEA using the Run button.
+
+Opened the following URL in a web browser:
+
+```text
+http://localhost:8080/
+```
+
+The Tomcat welcome page confirmed that the server was running.
+
+## Screenshots
+
+[Insert screenshot of Tomcat configuration]
+
+[Insert screenshot of successful Tomcat startup]
+
+[Insert screenshot of Tomcat welcome page]
+
+---
+
+# Task 4: Browser-Based Primality Testing Using Java Servlet
+
+## Objective
+To develop a Java Servlet application that accepts an integer from a web browser, checks whether the number is prime, and displays the result.
+
+## Tools and Technologies
+- Java (JDK 25)
+- Jakarta EE
+- Jakarta Servlet API 6.1.0
+- Apache Tomcat 11.0.27
+- IntelliJ IDEA Ultimate
+- Maven
+
+## Project Information
+
+**Project Name:** `PrimeChecker`
+
+**Servlet Class:** `PrimeServlet.java`
+
+**Servlet Mapping:** `/check`
+
+**Application Context:** `/PrimeChecker`
+
+## Maven Configuration
+
+The project uses WAR packaging to deploy the web application on Tomcat.
+
+Relevant `pom.xml` configuration:
+
+```xml
+<packaging>war</packaging>
+
+<properties>
+    <maven.compiler.source>25</maven.compiler.source>
+    <maven.compiler.target>25</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+</properties>
+
+<dependencies>
+    <dependency>
+        <groupId>jakarta.servlet</groupId>
+        <artifactId>jakarta.servlet-api</artifactId>
+        <version>6.1.0</version>
+        <scope>provided</scope>
+    </dependency>
+</dependencies>
+```
+
+## Project Structure
+
+```text
+PrimeChecker
+│
+├── src
+│   └── main
+│       ├── java
+│       │   └── com.example
+│       │       └── PrimeServlet.java
+│       │
+│       └── webapp
+│           └── index.html
+│
+└── pom.xml
+```
+
+## Complete Servlet Source Code
+
+**File: PrimeServlet.java**
+
+```java
+package com.example;
+
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+@WebServlet("/check")
+public class PrimeServlet extends HttpServlet {
+
+    @Override
+    protected void doGet(HttpServletRequest request,
+                         HttpServletResponse response)
+            throws IOException {
+
+        response.setContentType("text/html;charset=UTF-8");
+
+        PrintWriter out = response.getWriter();
+
+        String number = request.getParameter("number");
+
+        out.println("<html><body>");
+        out.println("<h2>Prime Number Checker</h2>");
+
+        out.println("<form method='get'>");
+        out.println("Enter a number: ");
+        out.println("<input type='number' name='number' required>");
+        out.println("<input type='submit' value='Check'>");
+        out.println("</form>");
+
+        if (number != null) {
+            try {
+                int n = Integer.parseInt(number);
+                boolean prime = n > 1;
+
+                for (int i = 2; i <= n / i && prime; i++) {
+                    if (n % i == 0) {
+                        prime = false;
+                    }
+                }
+
+                if (prime) {
+                    out.println("<h3>" + n +
+                            " is a Prime Number.</h3>");
+                } else {
+                    out.println("<h3>" + n +
+                            " is Not a Prime Number.</h3>");
+                }
+
+            } catch (NumberFormatException e) {
+                out.println("<h3>Please enter a valid integer.</h3>");
+            }
+        }
+
+        out.println("</body></html>");
+    }
+}
+```
+
+## HTML Source Code
+
+**File: index.html**
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prime Number Checker</title>
+</head>
+<body>
+
+    <h2>Prime Number Checker</h2>
+
+    <form action="check" method="get">
+        <label>Enter a Number:</label>
+        <input type="number" name="number" required>
+        <button type="submit">Check Prime</button>
+    </form>
+
+</body>
+</html>
+```
+
+## Build and Deployment
+
+Used Maven to clean and package the application.
+
+```bash
+mvn clean
+mvn package
+```
+
+The build completed successfully.
+
+The generated WAR artifact was deployed using IntelliJ IDEA's Tomcat Run Configuration.
+
+**Artifact:** `PrimeChecker:war exploded`
+
+**Application Context:** `/PrimeChecker`
+
+## Browser Access
+
+Opened the application using:
+
+```text
+http://localhost:8080/PrimeChecker/
+```
+
+Servlet URL:
+
+```text
+http://localhost:8080/PrimeChecker/check
+```
+
+## Browser Testing Results
+
+### Test 1: Prime Number
+
+**Input:** `17`
+
+**Expected Output:**
+
+```text
+17 is a Prime Number.
+```
+
+### Test 2: Non-Prime Number
+
+**Input:** `20`
+
+**Expected Output:**
+
+```text
+20 is Not a Prime Number.
+```
+
+Both test cases were successfully checked in the browser.
+
+## Screenshots
+
+[Insert screenshot of PrimeServlet.java]
+
+[Insert screenshot of pom.xml]
+
+[Insert screenshot of successful Maven BUILD SUCCESS]
+
+[Insert screenshot of Prime Number Checker home page]
+
+[Insert screenshot showing result for 17]
+
+[Insert screenshot showing result for 20]
+
+---
+
+# Conclusion
+
+All implemented tasks demonstrate practical experience with Java programming, JDBC database connectivity, MySQL, Apache Tomcat configuration, Jakarta Servlet development, and browser-based application testing.
+
+The JDBC application successfully calculated and stored prime numbers in MySQL. Apache Tomcat was configured and started successfully. The Jakarta Servlet application was deployed and tested through a web browser using both prime and non-prime inputs.
+
+---
+
+# GitHub Repository
+
+**Repository Link:** [Paste Your GitHub Repository URL Here]
+
+**Submission File:** `StudentID_1Nov.md`
