@@ -1,0 +1,80 @@
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 9
+Server version: 8.0.46 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2026, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql>
+mysql> CREATE DATABASE math_whiz_db;
+ERROR 1007 (HY000): Can't create database 'math_whiz_db'; database exists
+mysql>
+mysql> USE math_whiz_db;
+Database changed
+mysql>
+mysql> CREATE TABLE game_scores (
+    ->     id INT PRIMARY KEY AUTO_INCREMENT,
+    ->     player_name VARCHAR(100) NOT NULL,
+    ->     score INT NOT NULL,
+    ->     difficulty VARCHAR(20) NOT NULL DEFAULT 'NORMAL',
+    ->     played_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    -> );
+ERROR 1050 (42S01): Table 'game_scores' already exists
+mysql> DESCRIBE game_scores;
++-------------+--------------+------+-----+-------------------+-------------------+
+| Field       | Type         | Null | Key | Default           | Extra             |
++-------------+--------------+------+-----+-------------------+-------------------+
+| id          | int          | NO   | PRI | NULL              | auto_increment    |
+| player_name | varchar(100) | NO   |     | NULL              |                   |
+| score       | int          | NO   |     | NULL              |                   |
+| difficulty  | varchar(20)  | NO   |     | NULL              |                   |
+| played_at   | timestamp    | YES  |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED |
++-------------+--------------+------+-----+-------------------+-------------------+
+5 rows in set (0.04 sec)
+
+mysql> SELECT * FROM game_scores;
+Empty set (0.00 sec)
+
+mysql> USE math_whiz_db;
+Database changed
+mysql>
+mysql> ALTER TABLE game_scores
+    -> ADD COLUMN student_id VARCHAR(50) NOT NULL DEFAULT '' AFTER id;
+Query OK, 0 rows affected (0.08 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> DESCRIBE game_scores;
++-------------+--------------+------+-----+-------------------+-------------------+
+| Field       | Type         | Null | Key | Default           | Extra             |
++-------------+--------------+------+-----+-------------------+-------------------+
+| id          | int          | NO   | PRI | NULL              | auto_increment    |
+| student_id  | varchar(50)  | NO   |     |                   |                   |
+| player_name | varchar(100) | NO   |     | NULL              |                   |
+| score       | int          | NO   |     | NULL              |                   |
+| difficulty  | varchar(20)  | NO   |     | NULL              |                   |
+| played_at   | timestamp    | YES  |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED |
++-------------+--------------+------+-----+-------------------+-------------------+
+6 rows in set (0.01 sec)
+
+mysql> DESCRIBE game_scores
+    ->
+    ->
+    -> SELECT * FROM game_scores;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SELECT * FROM game_scores' at line 4
+mysql> SELECT * FROM game_scores;
++----+------------+-------------------+-------+------------+---------------------+
+| id | student_id | player_name       | score | difficulty | played_at           |
++----+------------+-------------------+-------+------------+---------------------+
+|  1 |            | Obayet            |    10 | NORMAL     | 2026-11-09 19:23:34 |
+|  2 | IT24003    | Md Obayet Khan    |     7 | NORMAL     | 2026-11-09 19:35:52 |
+|  3 | IT24013    | Md Khaid Hasan    |     7 | NORMAL     | 2026-11-09 21:39:37 |
+|  4 | IT24005    | Ferdous Bin Hafiz |    10 | NORMAL     | 2026-11-09 21:47:53 |
++----+------------+-------------------+-------+------------+---------------------+
+4 rows in set (0.02 sec)
+
+mysql>
