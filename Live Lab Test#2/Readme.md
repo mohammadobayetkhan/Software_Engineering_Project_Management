@@ -75,7 +75,13 @@ Answer : Actually game logic was implemented in two jsp files and two java files
    <img width="1030" height="242" alt="image" src="https://github.com/user-attachments/assets/bda130e4-581c-4fc6-b4c0-f4427ec24b89" />
 
 ## TASK 08  Display Top 10 Scores : 
-### Screnshot : 
-      <img width="746" height="496" alt="image" src="https://github.com/user-attachments/assets/7a26c8e0-3adc-4f58-9cf7-4118a80d3e8e" />
+### Scrennshot : 
+   <img width="745" height="532" alt="image" src="https://github.com/user-attachments/assets/c12054b7-fc7d-4db2-8448-5167fbf52572" />
 
+## TASK 09  Testing and Validation :
+These testing already provided in previous tasks . And the answer is valid for all numbers.
+
+## TASK 10  Final Documentation and GitHub Submission : 
+### Code and Other thing : 
+   
 
