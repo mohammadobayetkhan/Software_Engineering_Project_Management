@@ -33,7 +33,9 @@ Compare decimal answers using an appropriate tolerance.
                             <img width="1042" height="860" alt="image" src="https://github.com/user-attachments/assets/1db60ac3-cb9b-40ff-ad20-da1910c0e25a" />
 
 ## TASK 02  Design the Game Interface : 
-### Code : 
+### Code of all the interfaces  : 
+https://github.com/mohammadobayetkhan/Software_Engineering_Project_Management/tree/main/Live%20Lab%20Test%232/ObayetMATHWHIZ/src/main/webapp 
+
 ### Screenshot : 
 1. Home Interface :
    <img width="747" height="550" alt="image" src="https://github.com/user-attachments/assets/701bc68f-f912-4378-a780-d8b2a16cb3a0" />
@@ -58,6 +60,9 @@ Compare decimal answers using an appropriate tolerance.
 ### Screenshot :
    <img width="700" height="755" alt="image" src="https://github.com/user-attachments/assets/7caacb31-c191-4e04-b09c-11f54f7b1123" />
 
+## Code of task 03,04,05 : 
+https://github.com/mohammadobayetkhan/Software_Engineering_Project_Management/blob/main/Live%20Lab%20Test%232/ObayetMATHWHIZ/src/main/java/com/obayet/mathwhiz/service/MathService.java
+
 ## TASK 06  Implement Game Logic: 
 Integrate the mathematical functions into the game.
 
@@ -68,7 +73,9 @@ Calculate the total score.
 
 Answer : Actually game logic was implemented in two jsp files and two java files . They are GameServlet.java, MathService.java , game.jsp , prime-input.jsp
 ### JSP FIle : 
+   https://github.com/mohammadobayetkhan/Software_Engineering_Project_Management/tree/main/Live%20Lab%20Test%232/ObayetMATHWHIZ/src/main/webapp
 ### Java File : 
+   https://github.com/mohammadobayetkhan/Software_Engineering_Project_Management/tree/main/Live%20Lab%20Test%232/ObayetMATHWHIZ/src/main/java/com/obayet/mathwhiz
 
 ## TASK 07  Database Design Using JDBC : 
 ### Screnshot  :
@@ -83,5 +90,6 @@ These testing already provided in previous tasks . And the answer is valid for a
 
 ## TASK 10  Final Documentation and GitHub Submission : 
 ### Code and Other thing : 
+https://github.com/mohammadobayetkhan/Software_Engineering_Project_Management/tree/main/Live%20Lab%20Test%232/ObayetMATHWHIZ
    
 
