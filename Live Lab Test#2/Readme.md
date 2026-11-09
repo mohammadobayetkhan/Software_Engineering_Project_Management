@@ -19,9 +19,14 @@ Compare decimal answers using an appropriate tolerance.
 
 
 # Development Tasks – Step by Step :
+
 ## TASK 01  Project Setup : 
 ### Screenshot : 
-1. Apache Tomcate Configuration : <img width="1093" height="912" alt="image" src="https://github.com/user-attachments/assets/01d72049-2cc9-420e-8256-c7f427ac7a3a" />
-2. Project Structure : <img width="811" height="868" alt="image" src="https://github.com/user-attachments/assets/075509a3-e853-457e-969d-b7088f51ab02" />
-3. Database : <img width="1042" height="860" alt="image" src="https://github.com/user-attachments/assets/1db60ac3-cb9b-40ff-ad20-da1910c0e25a" />
+
+1. Apache Tomcate Configuration :
+                            <img width="1093" height="912" alt="image" src="https://github.com/user-attachments/assets/01d72049-2cc9-420e-8256-c7f427ac7a3a" />
+2. Project Structure :
+                            <img width="811" height="868" alt="image" src="https://github.com/user-attachments/assets/075509a3-e853-457e-969d-b7088f51ab02" />
+3. Database :
+                            <img width="1042" height="860" alt="image" src="https://github.com/user-attachments/assets/1db60ac3-cb9b-40ff-ad20-da1910c0e25a" />
 
