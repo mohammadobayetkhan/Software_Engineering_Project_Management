@@ -55,7 +55,7 @@ Compare decimal answers using an appropriate tolerance.
    <img width="637" height="286" alt="image" src="https://github.com/user-attachments/assets/66bbd092-ba5e-40cd-b3ed-9fbf5dc2e4fa" />
    
 ## TASK 05  Develop Trigonometric Functions :
-###Screenshot :
+### Screenshot :
    <img width="700" height="755" alt="image" src="https://github.com/user-attachments/assets/7caacb31-c191-4e04-b09c-11f54f7b1123" />
 
 ## TASK 06  Implement Game Logic: 
@@ -64,4 +64,18 @@ Integrate the mathematical functions into the game.
 Generate four questions: one prime, one modulus and two trigonometric.
 Accept player answers.
 Evaluate answers using the respective Java methods.
-Calculate the total score.
+Calculate the total score. 
+
+Answer : Actually game logic was implemented in two jsp files and two java files . They are GameServlet.java, MathService.java , game.jsp , prime-input.jsp
+### JSP FIle : 
+### Java File : 
+
+## TASK 07  Database Design Using JDBC : 
+### Screnshot  :
+   <img width="1030" height="242" alt="image" src="https://github.com/user-attachments/assets/bda130e4-581c-4fc6-b4c0-f4427ec24b89" />
+
+## TASK 08  Display Top 10 Scores : 
+### Screnshot : 
+      <img width="746" height="496" alt="image" src="https://github.com/user-attachments/assets/7a26c8e0-3adc-4f58-9cf7-4118a80d3e8e" />
+
+
