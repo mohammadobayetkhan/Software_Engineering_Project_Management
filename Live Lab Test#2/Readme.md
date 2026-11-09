@@ -95,3 +95,5 @@ https://github.com/mohammadobayetkhan/Software_Engineering_Project_Management/tr
 ## Mark Distribution : 
    <img width="985" height="327" alt="image" src="https://github.com/user-attachments/assets/ff48acef-721d-4256-b77b-427ed799dcdd" />
 
+## SQL Full Setup : https://github.com/mohammadobayetkhan/Software_Engineering_Project_Management/blob/main/Live%20Lab%20Test%232/SQL%20Settings
+
