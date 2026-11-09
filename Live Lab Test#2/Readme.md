@@ -92,4 +92,6 @@ These testing already provided in previous tasks . And the answer is valid for a
 ### Code and Other thing : 
 https://github.com/mohammadobayetkhan/Software_Engineering_Project_Management/tree/main/Live%20Lab%20Test%232/ObayetMATHWHIZ
    
+## Mark Distribution : 
+   <img width="985" height="327" alt="image" src="https://github.com/user-attachments/assets/ff48acef-721d-4256-b77b-427ed799dcdd" />
 
