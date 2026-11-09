@@ -25,6 +25,8 @@ Compare decimal answers using an appropriate tolerance.
 
 1. Apache Tomcate Configuration :
                             <img width="1093" height="912" alt="image" src="https://github.com/user-attachments/assets/01d72049-2cc9-420e-8256-c7f427ac7a3a" />
+
+
 2. Project Structure :
                             <img width="811" height="868" alt="image" src="https://github.com/user-attachments/assets/075509a3-e853-457e-969d-b7088f51ab02" />
 3. Database :
