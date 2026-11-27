@@ -9,7 +9,7 @@
 ![Reflection](https://img.shields.io/badge/Powered%20by-Reflection-blue)
 ![Status](https://img.shields.io/badge/Build-Passing-success)
 
-*Annotations are not magic — they are just metadata plus reflection.* ✨
+*Annotations are not magic — they are just metadata plus reflection.* 
 
 </div>
 
