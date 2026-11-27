@@ -292,8 +292,6 @@ It lets the framework touch private fields without setters, but it breaks encaps
 
 **Md Obayet Khan** · Student ID: `IT24003`
 
-*Built for the Campus IT Lab assignment — Java Reflection & Custom Annotations* 🥾
-
 ⭐ If you found this helpful, give the repo a star! ⭐
 
 </div>
