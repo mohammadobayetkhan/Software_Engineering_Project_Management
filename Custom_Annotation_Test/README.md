@@ -27,8 +27,6 @@
 8. [🧪 Sample Output](#-sample-output)
 9. [🧠 Reflection Questions](#-reflection-questions)
 10. [📝 Design Notes](#-design-notes)
-11. [📊 Grading Checklist](#-grading-checklist)
-
 ---
 
 ## 📖 About the Project
