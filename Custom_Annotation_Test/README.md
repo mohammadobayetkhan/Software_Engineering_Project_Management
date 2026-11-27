@@ -288,19 +288,6 @@ It lets the framework touch private fields without setters, but it breaks encaps
 
 ---
 
-## 📊 Grading Checklist
-
-| Part | Task | Points | Status |
-|---|---|:---:|:---:|
-| **A** | Annotations with correct `@Target`, `@Retention`, defaults | 2 | ✅ |
-| **B** | Container: scan, naming, `@Value` injection, `int` conversion | 3 | ✅ |
-| **C** | Validator: `@Range` check and message format | 2 | ✅ |
-| **D** | Router: `@Route` dispatch and `404` handling | 2 | ✅ |
-| **E** | Three reflection answers | 1 | ✅ |
-| | **Total** | **10** | 🎉 |
-
----
-
 <div align="center">
 
 ### 👤 Author
