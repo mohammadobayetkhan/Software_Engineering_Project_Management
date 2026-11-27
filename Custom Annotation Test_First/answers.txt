@@ -1,0 +1,6 @@
+1. If @Retention(RetentionPolicy.RUNTIME) were omitted, the annotations would not be available to Java Reflection at runtime (the default retention is CLASS). CampusBoot would therefore be unable to find these annotations using reflection, so scanning, injection, validation, and routing would not work as designed.
+
+2. @Component corresponds to Spring's @Component, @Value corresponds to Spring's @Value, @Range is similar in purpose to validation annotations such as @Min/@Max (or a custom constraint), and @Route is conceptually similar to Spring MVC's @GetMapping/@RequestMapping. Real Spring provides a much larger application context, dependency injection, lifecycle management, configuration sources, HTTP server integration, and many other features.
+
+3. setAccessible(true) can allow reflection to access fields or methods that are not normally accessible, such as private members, enabling frameworks to inject values or invoke methods. It is risky because it bypasses ordinary access checks, can undermine encapsulation, and may be restricted by Java's module system.
+
