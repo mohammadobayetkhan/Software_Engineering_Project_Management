@@ -305,7 +305,7 @@ It lets the framework touch private fields without setters, but it breaks encaps
 
 ### 👤 Author
 
-**Your Name** · Student ID: `YOUR_ID`
+**Md Obayet Khan** · Student ID: `IT24003`
 
 *Built for the Campus IT Lab assignment — Java Reflection & Custom Annotations* 🥾
 
