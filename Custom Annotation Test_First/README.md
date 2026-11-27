@@ -1,4 +1,4 @@
-# ☕ CampusBoot
+#  CampusBoot
 ### A Tiny Annotation-Driven Framework Built with Java Reflection
 
 > A small, dependency-free demonstration of how annotations and reflection can power component registration, configuration injection, validation, and routing—the core ideas behind frameworks such as Spring.
@@ -124,8 +124,4 @@ CampusBoot is an educational miniature—not a production framework. It illustra
 ---
 
 <div align="center">
-
-**Built for the Java Reflection & Custom Annotations assignment.**  
-*CampusBoot — annotations are metadata, reflection makes them actionable.*
-
 </div>
