@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🥾 CampusBoot
+#  CampusBoot
 
 ### A tiny Spring-Boot-style framework built with **Custom Annotations** and **Java Reflection**
 
